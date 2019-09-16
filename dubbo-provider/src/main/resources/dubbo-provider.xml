@@ -11,7 +11,7 @@
     <dubbo:application name="dubbo-demo-provider"/>
 
     <!--dubbo注册地址-->
-    <dubbo:registry address="zookeeper://localhost:2181"/>
+    <dubbo:registry address="zookeeper://${zookeeper.ipAddress}:2181"/>
 
     <!--dubbo协议地址-->
     <dubbo:protocol name="dubbo" port="20880"/>

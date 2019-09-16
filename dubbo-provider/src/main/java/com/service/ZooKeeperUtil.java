@@ -176,7 +176,7 @@ public class ZooKeeperUtil {
     }
 
     public static void main(String[] args) {
-        String zkHost = "192.168.106.128:2181";
+        String zkHost = "192.168.1.107:2181";
         int timeOut = 1000;
         try {
             //连接
