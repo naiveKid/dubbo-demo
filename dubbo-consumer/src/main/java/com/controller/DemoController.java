@@ -2,6 +2,7 @@ package com.controller;
 
 import com.service.DemoService;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
@@ -10,14 +11,14 @@ import org.springframework.web.bind.annotation.RestController;
  * 测试类
  */
 @RestController
-@RequestMapping("/consumer")
+@RequestMapping("/")
 public class DemoController {
     @Autowired
     DemoService demoService;
 
-    @RequestMapping("/test")
-    public String test(){
-        String username = "lisi";
+    @RequestMapping("/{name}")
+    public String test(@PathVariable String name){
+        String username = name;
         return  demoService.changeUsername(username);
     }
 }

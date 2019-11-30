@@ -13,7 +13,7 @@
     <!--dubbo注册地址-->
     <dubbo:registry address="zookeeper://${zookeeper.ipAddress}:2181"/>
 
-    <!--dubbo协议地址-->
+    <!--dubbo协议地址 可使用telnet直接访问: telnet localhost 20880 -->
     <dubbo:protocol name="dubbo" port="20880"/>
 
     <!--接口声明-->
